@@ -36,10 +36,10 @@ public class ServicoService {
 	}
 	
 	public Servico alterar(Servico servico) {
-		if(servico.getValorPago() != null && servico.getValorPago() > 0 || servico.getDescricaoServico() != null) {
+		if(servico.getValorPago() != null && servico.getValorPago() > 0 && servico.getDescricaoServico() != null) {
 			servico.setStatus("realizado");
 		}
-		return servicoRepository.saveAndFlush(servico);
+		return servicoRepository.save(servico);
 	}
 	
 	public void excluir(Long id) {

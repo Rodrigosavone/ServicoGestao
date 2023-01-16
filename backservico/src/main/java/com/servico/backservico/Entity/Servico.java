@@ -1,5 +1,6 @@
 package com.servico.backservico.Entity;
 
+
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -39,6 +40,15 @@ public class Servico {
 	private Date dataPagamento;
 	
 	private String status; //pendente, realizado, cancelado
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNomeCliente() {
 		return nomeCliente;
